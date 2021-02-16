@@ -36,8 +36,8 @@ function cards() {
 
     
 
-    getResource("http://localhost:3000/menu").then((data) => {
-        data.forEach(({ img, altimg, title, descr, price }) => {
+    getResource("/db.json").then((data) => {
+        data.menu.forEach(({ img, altimg, title, descr, price }) => {
             new MenuCard(
                 img,
                 altimg,
